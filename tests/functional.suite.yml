@@ -1,0 +1,32 @@
+# Codeception Test Suite Configuration
+#
+# Suite for functional (integration) tests
+# Emulate web requests and make application process them
+# Include one of framework modules (Symfony2, Yii2, Laravel5) to use it
+
+class_name: FunctionalTester
+modules:
+    enabled:
+        # - PhpBrowser:
+        #     #url: https://qa-pcs-admin.hcah.in
+        #     url: http://localhost:3000
+            #browser: chrome
+        - WebDriver:
+            url: http://localhost:3000
+            browser: 'chrome'
+
+        - \Helper\Functional
+
+
+env:
+    phantom:
+         modules:
+            config:
+                WebDriver:
+                    browser: 'phantomjs'
+
+    # chrome:
+    #      modules:
+    #         config:
+    #             WebDriver:
+    #                 browser: 'chrome'

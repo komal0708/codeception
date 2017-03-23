@@ -1,0 +1,14 @@
+I WANT TO 
+
+I  want to 'ensure that user is sucessfully logged in' 
+I  am on page '/login' 
+I  fill field 'Username'," 'sys_admin' 
+I  fill field 'Password'," 'p@ssw0rd1' 
+I  click 'Sign in' 
+I  see 'Patients' "," 'span' 
+I  see in current url '/patients' 
+I  see link 'Register New Patient' 
+I  click 'Register New Patient' 
+I  can see in current url ""patients/new"" 
+I  see 'Patient Pre-Registration Form' "," 'span#pre-registration-header'
+
