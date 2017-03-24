@@ -22,6 +22,7 @@ class loginCest
     // public function tryToTest(FunctionalTester $I)
     // {
     // }
+    
    public function LoginWithValidCredentials($I)
     {
         $I->fillFormField('sys_admin', 'p@ssw0rd1');
