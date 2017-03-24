@@ -12,7 +12,4 @@ class Functional extends \Codeception\Module
     $I->fillField('Password', $password);
     $I->click('Sign in');
   }
-  
-
-
 }
