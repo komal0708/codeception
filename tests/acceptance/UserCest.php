@@ -4,6 +4,7 @@ class UserCest
 {
     public function _before(FunctionalTester $I)
     {
+      $I->amOnPage('/');
     }
 
     public function _after(FunctionalTester $I)
@@ -13,7 +14,7 @@ class UserCest
    
    public function LoginWithValidCredentials($I)
     {
-        $I->fillForm('sys_admin', 'p@ssw0rd1');
+        $I->fillFormField('sys_admin', 'p@ssw0rd1');
         $I-> see('Patients' , 'span');
         $I-> seeInCurrentUrl('/patients');
         $I-> seeLink('Register New Patient');
