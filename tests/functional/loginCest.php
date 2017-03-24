@@ -12,7 +12,6 @@ class loginCest
         // $I->amOnPage(LoginPage::$URL); if declared variable public static in page/login.php
         $I->amOnPage(LoginPage::URL); // if declared variable constant in page/login.php
     }
-
   
 
 
