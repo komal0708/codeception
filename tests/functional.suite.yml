@@ -7,23 +7,23 @@
 class_name: FunctionalTester
 modules:
     enabled:
-        # - PhpBrowser:
+        - PhpBrowser:
         #     #url: https://qa-pcs-admin.hcah.in
-        #     url: http://localhost:3000
-            #browser: chrome
-        - WebDriver:
             url: http://localhost:3000
-            browser: 'chrome'
+            #browser: chrome
+        # - WebDriver:
+        #     url: http://localhost:3000
+        #     browser: 'chrome'
 
         - \Helper\Functional
+ 
 
-
-env:
-    phantom:
-         modules:
-            config:
-                WebDriver:
-                    browser: 'phantomjs'
+# env:
+#     phantom:
+#          modules:
+#             config:
+#                 WebDriver:
+#                     browser: 'phantomjs'
 
     # chrome:
     #      modules:
