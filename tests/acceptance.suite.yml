@@ -4,10 +4,64 @@
 # Perform tests in browser using the WebDriver or PhpBrowser.
 # If you need both WebDriver and PHPBrowser tests - create a separate suite.
 
+
 class_name: AcceptanceTester
 modules:
     enabled:
+       # - PhpBrowser:
+        #     #url: https://qa-pcs-admin.hcah.in
+          #  url: http://localhost:3000
+            #browser: chrome
         - WebDriver:
             url: http://localhost:3000
             browser: 'chrome'
+            # browser_version: "55"
+
         - \Helper\Acceptance
+
+
+
+
+
+
+# class_name: AcceptanceTester
+
+# modules:
+#   enabled:
+#     - WebDriver
+#   config:
+#     WebDriver:
+#       host: 'hub-cloud.browserstack.com'
+#       # port: 80
+#       browser: firefox
+#       url: 'http://localhost:3000/'
+#       browser_version: "47"
+#       capabilities:
+#         'browserstack.user': 'komalbatra1'
+#         'browserstack.key' : 'dKxDxBMA4Yuysy3KknED'
+#         'browserstack.local': true
+
+# env:
+#   parallel_0:
+#     modules:
+#       config:
+#         WebDriver:
+#           browser: 'chrome'
+
+#   parallel_1:
+#     modules:
+#       config:
+#         WebDriver:
+#           browser: 'firefox'
+
+#   parallel_2:
+#     modules:
+#       config:
+#         WebDriver:
+#           browser: 'safari'
+
+#   parallel_3:
+#     modules:
+#       config:
+#         WebDriver:
+#           browser: 'internet explorer'

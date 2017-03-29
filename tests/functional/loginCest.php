@@ -3,8 +3,10 @@ use Page\Login as LoginPage;
 use Step\Functional\Login as UserRoleLogin;
 
 
+
 class loginCest
 {
+
     public function _before(FunctionalTester $I)
     {
         // $I->amOnPage('/');
@@ -18,18 +20,23 @@ class loginCest
     {
     }
 
-    // tests
-    // public function tryToTest(FunctionalTester $I)
-    // {
-    // }
-    
+   
+    /**
+      * @group test
+    */
+
+
    public function LoginWithValidCredentials($I)
     {
         $I->fillFormField('sys_admin', 'p@ssw0rd1');
         $I->see('Patients' , 'span');
         $I->seeInCurrentUrl('/patients');
         $I->seeLink('Register New Patient');
+
     }
+    /**
+      * @group admin
+    */
 
     // test #2
     public function LoginWithInvalidCredentials($I)
@@ -40,6 +47,10 @@ class loginCest
         $I->click(LoginPage::$formSubmitButton);
         $I->see('Please enter a valid username and password');
     }
+
+   /**
+      * @group admin
+    */
 
     public function LoginWithSystemAdmin(UserRoleLogin $I)
     {

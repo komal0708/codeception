@@ -14,7 +14,7 @@
   $I-> fillField(LoginPage::$passwordField, 'p@ssw0rd1');
   // $I-> fillField('Last' , 'ra');
   $I-> click('Sign in');
-  $I-> see('Patients' , 'span');
+  // $I-> see('Patients' , 'span');
   $I-> seeInCurrentUrl('/patients');
   $I-> seeLink('Register New Patient');
   $I-> click('Register New Patient');

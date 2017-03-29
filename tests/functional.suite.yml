@@ -4,6 +4,7 @@
 # Emulate web requests and make application process them
 # Include one of framework modules (Symfony2, Yii2, Laravel5) to use it
 
+
 class_name: FunctionalTester
 modules:
     enabled:
@@ -14,19 +15,67 @@ modules:
         - WebDriver:
             url: http://localhost:3000
             browser: 'chrome'
+            browser_version: "55"
 
         - \Helper\Functional
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Uncomment this for browser stack integration
+
+
+
+
+
+
+# class_name: FunctionalTester
+# modules:
+#     enabled:
+#        # - PhpBrowser:
+#         #     #url: https://qa-pcs-admin.hcah.in
+#           #  url: http://localhost:3000
+#             #browser: chrome
+#         - WebDriver:
+#             url: http://localhost:3000
+#             host: 'komalbatra1:dKxDxBMA4Yuysy3KknED@hub.browserstack.com'
+#             browser: 'chrome'
+#             capabilities:
+#               os: Windows
+#               os_version: 10
+#               browserstack.local: true
+#               browserstack.debug: true
+
+#         - \Helper\Functional
  
 
-env:
-    phantom:
-         modules:
-            config:
-                WebDriver:
-                    browser: 'phantomjs'
+# # env:
+# #     phantom:
+# #          modules:
+# #             config:
+# #                 WebDriver:
+# #                     browser: 'phantomjs'
 
-    # chrome:
-    #      modules:
-    #         config:
-    #             WebDriver:
-    #                 browser: 'chrome'
+# env:
+#   parallel_0:
+#     modules:
+#       config:
+#         WebDriver:
+#           browser: 'chrome'
+
+#   parallel_1:
+#     modules:
+#       config:
+#         WebDriver:
+#           browser: 'firefox'
+#           # browser: 'chrome'
